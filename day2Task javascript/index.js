@@ -21,3 +21,11 @@ let perDaySalary = 2000;
 let workingDays = 22;
 let salary = perDaySalary * workingDays;
 console.log("Monthly Salary =", salary);
+
+
+// // defining variables we use var,let,const
+// //when we use var a memory address is created
+// //js code runs in 2phases
+// 1.memory creation -- Allocates memory for variables and functions
+// 2.code execution  -- after memory is created code will be executed(Executes the code line by line)
+

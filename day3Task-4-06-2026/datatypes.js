@@ -1,9 +1,9 @@
-var a=10
-var abc=30
-var name = "sulochana" 
-var bool = true
-var k 
-var m=null 
+var a=10          //10
+var abc=30        //30
+var name = "sulochana"      //sulochana
+var bool = true             //true
+var k                       //undefined
+var m=null                  //null
 console.log(abc)
 console.log(a) 
 console.log(name) 
@@ -12,7 +12,13 @@ console.log(k)
 console.log(m)
 
 //type of operator
-console.log(typeof(a)) 
+console.log(typeof(a))     //number
+console.log(typeof(abc))    //number
+console.log(typeof(name))   //string 
+console.log(typeof(bool))    //boolean 
+console.log(typeof(k))       //undefined
+console.log(typeof(m))       //object 
+
 
 
 function checkName() {
@@ -181,9 +187,9 @@ var n = 1
 var b = true 
 var u 
 var k = null 
-console.log(s,typeof(s))
-console.log(n,typeof(n)) 
-console.log(u),typeof((u))
+console.log(s,typeof(s))          //string
+console.log(n,typeof(n))          //number
+console.log(u),typeof((u))        //undefined  
 console.log(k,typeof(k))        //object 
 
 var b = 10n 
@@ -195,7 +201,7 @@ console.log(b,typeof(b))
 //object 
 //arrays 
 //functions 
-//E.S-6 2015(map, weakmap, set, weak set) 
+//E.S-6 2015(map, weakmap, set, weak set) --- javascript is developed by es6
 //Date 
 //regular experssion 
 
@@ -205,6 +211,8 @@ console.log(b,typeof(b))
 //each key and value will be separated by :
 //each key value pair will be seperated by ,
 
+//we can store any kind of data in objects
+
 
 var obj = {name:"sulochana", role:"lead", number:9438458584449, female:true, salary:800000, attendence:{jan:20, feb:20}} 
 console.log(obj)
@@ -212,13 +220,14 @@ var a = {}
 console.log(typeof(obj))
 
 
-//arrays
+//arrays - homogenuous and heterogenous data is stored
 
 var arr = [1,2,3,4,"hello","hai",true,false,null,[1,2,34,43,45333]]
 console.log(arr)
 
 
 //functions
+//function is a block of code which is use to do some task and return some value 
 
 function Hello(){
     console.log("hai! how are you?")
@@ -241,7 +250,7 @@ function salary2(name,days){  //parameters
     
 }
 salary2("naresh",20)  //arguments
-salary2("vamsi",20)
+salary2("vamsi",21)
 
 
 console.log("all the salaries are calculated")
@@ -256,3 +265,5 @@ function salary2(name,days){  //parameters
 }
 salary2("naresh",20)  //arguments
 salary2("vamsi",20)
+
+
