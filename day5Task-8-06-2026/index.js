@@ -1,4 +1,4 @@
-//Ternary Operator
+//Ternary Operator -- A ternary operator is a shorthand version of an if...else statement.
 
 // if condition is true then the conditions which are there in the 1st condition will be executed if the conditions are false then the other conditions will be executed
 // condition ? true case: false case
@@ -193,5 +193,6 @@ for(i in arr){
 // for(a of obj){
 //     console.log(a)
 // }
+
 
 
