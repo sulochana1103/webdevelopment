@@ -195,4 +195,48 @@ for(i in arr){
 // }
 
 
+//for in
+//used to iterate over properties (keys)
+//returns the index/key
+//on objects for in only applicable for of wont applicable
+let person={
+    name:"sulochana",
+    age:25
 
+}
+for(let x in person){
+    console.log(x)
+}
+//for of
+// for(let x of person){
+//     console.log(x)
+// }
+//array
+let employee=["sulochana",25,"hyd"]
+//for in on arrays
+for(y in employee){ //if we use for in on arrays we get index values 
+                    //if we use for in on objects we get keys.
+    console.log(y)
+}
+//for of on arrays
+for(z of employee){
+    console.log(z)
+}
+//for of on strings
+let name="sulochana";
+for(let n of name){
+    console.log(n)
+}
+
+
+
+//for each
+let fruits=["apple","banana","mango"]
+fruits.forEach(function(fruit,index){
+    console.log(fruit,index)
+})
+//using arrow function
+let numbers=[10,20,30]
+numbers.forEach(num=>{
+    console.log(num)
+})
