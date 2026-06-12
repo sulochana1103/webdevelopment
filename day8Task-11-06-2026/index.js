@@ -183,3 +183,63 @@ function add(a){
 }
 console.log(add(10)(20))
 
+
+//Create Practical Example Using IIFE
+(function () {
+    let username = "Sulochana";
+    console.log("Welcome " + username);
+})();
+
+
+//Implement Closure-Based Program
+function counter() {
+    let count = 0;
+
+    return function () {
+        count++;
+        return count;
+    };
+}
+const increment = counter();
+console.log(increment());
+console.log(increment());
+console.log(increment());
+
+
+
+//Function Passed as an Argument
+function hello(name) {
+    console.log("Hello " + name);
+}
+function execute(callback) {
+    callback("Sulochana");
+}
+execute(hello);
+
+//Function Returned from Another Function
+function multiplyBy(num) {
+    return function (value) {
+        return value * num;
+    };
+}
+const double = multiplyBy(2);
+console.log(double(10));
+
+
+
+//Pure Function (Real-World Example)
+function calculateGST(price) {
+    return price + price * 0.18;
+}
+console.log(calculateGST(1000));
+
+
+//Impure Function (Real-World Example)
+let balance = 1000;
+
+function withdraw(amount) {
+    balance -= amount;
+    return balance;
+}
+console.log(withdraw(200));
+console.log(withdraw(200));
