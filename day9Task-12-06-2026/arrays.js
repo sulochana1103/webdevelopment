@@ -252,31 +252,8 @@ let fruits2 = ["Apple", "Banana", "Mango"];
 console.log(fruits2.length);
 
 
-//Multidimensional Arrays
-let matrix = [
-    [1, 2, 3],
-    [4, 5, 6],
-    [7, 8, 9]
-];
-console.log(matrix)
 
 
-//Access Elements in a 2D Array
-let matrix1 = [
-    [10, 20],
-    [30, 40]
-];
-console.log(matrix1[0][0]);
-console.log(matrix1[1][1]);
-
-
-//Modify an Element
-let matrix2 = [
-    [1, 2],
-    [3, 4]
-];
-matrix2[0][1] = 100;
-console.log(matrix2);
 
 //Adding Elements to Arrays
 //push() – Add at the End
