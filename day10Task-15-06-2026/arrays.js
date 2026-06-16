@@ -101,11 +101,7 @@ var arr2=[1,2,3,4]
 console.log(arr2.map(i=>i+1))
 console.log(arr2.map(i=>i*i))
 
-
-
 console.log(m.filter(i=>i>3))
-
-
 
 //for each
 //both index value and value will return

@@ -204,13 +204,32 @@ for (let value of arr4) {
 console.log(n)
 
 //Using a for Loop
-let arr = [1, 2, 2, 3, 4, 4, 5]
-let unique = []
-for (let i = 0; i < arr.length; i++) {
-    if (!unique.includes(arr[i])) {
-        unique.push(arr[i])
-    }
-}
-console.log(unique)
+// let arr = [1, 2, 2, 3, 4, 4, 5]
+// let unique = []
+// for (let i = 0; i < arr.length; i++) {
+//     if (!unique.includes(arr[i])) {
+//         unique.push(arr[i])
+//     }
+// }
+// console.log(unique)
+
+//map
+let numbers11=[1,2,3,4]
+let double=numbers11.map(k=>k*2)
+console.log(double)
+//it returns new array
+//it will change each element in the array
+
+//filter
+//it returns new array
+//it contains only elements that satisfy a condition
+let digits=[1,2,3,4,5,6]
+let evennumber=digits.filter(p=>p%2===0);
+console.log(evennumber)
+//reduce
+//reduces an array to a single value
+let digits3=[1,2,3,4]
+let sum22=digits3.reduce((m,n)=>m+n,0)
+console.log(sum22)
 
 
