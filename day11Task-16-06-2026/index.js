@@ -194,3 +194,11 @@ copy2.name = "sulochana";
 console.log(original11);
 console.log(copy1);
 console.log(copy2);
+
+
+// in how many ways shallow copy can be done
+
+
+//object.keys
+//object.value
+//object.entities

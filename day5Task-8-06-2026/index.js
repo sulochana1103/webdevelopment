@@ -213,6 +213,7 @@ for(let x in person){
 // }
 //array
 let employee=["sulochana",25,"hyd"]
+
 //for in on arrays
 for(y in employee){ //if we use for in on arrays we get index values 
                     //if we use for in on objects we get keys.
