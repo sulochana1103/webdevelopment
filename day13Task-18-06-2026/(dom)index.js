@@ -75,13 +75,6 @@ parentElement.appendChild(newElement)
 parentElement.prepend(newElement)
 
 
-//before 
-
-
-
-//after
-
-
 
 let btn=document.getElementById('btn')
 console.log(btn) 
