@@ -142,3 +142,16 @@ a1.addEventListener("click",function action3(){
     alert("Button clicked!")
 })
 
+
+
+//.then()  //success case resolve
+
+//.catch()   //failure  //reject
+
+
+.then((a)=>{
+    console.log(a)
+})
+.catch((b)=>{
+    console.log(b)
+})
