@@ -1,0 +1,227 @@
+@media media-type and (condition) {
+    /* CSS Rules */
+}
+
+/* If the screen width is 768px or less, the background color changes to light blue. */
+@media (max-width: 768px) {
+    body {
+        background-color: lightblue;
+    }
+}
+/*Types of media queries 
+max-width  --  Applies styles for screens up to the specified width. */
+
+@media (max-width:768px){
+    body{
+        background:lightblue;
+    }
+}
+/*  min-width  ----  Applies styles for screens greater than or equal to the specified width. */
+
+@media (min-width:992px){
+    body{
+        background:lightgreen;
+    }
+}
+
+/* min-width  ----  Applies styles for screens greater than or equal to the specified width. */
+
+@media (min-width:992px){
+    body{
+        background:lightgreen;
+    }
+}
+
+/* Orientation  -----    Changes styles based on portrait or landscape mode. */
+
+@media (orientation:landscape){
+    body{
+        background:lightyellow;
+    }
+}
+
+body{
+    background:lightgray;
+    text-align:center;
+}
+
+@media(max-width:768px){
+    body{
+        background:skyblue;
+    }
+}
+
+nav{
+    display:flex;
+    justify-content:center;
+    gap:20px;
+    background:#333;
+    padding:15px;
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+}
+
+@media(max-width:768px){
+
+nav{
+    flex-direction:column;
+    align-items:center;
+}
+
+}
+.container{
+    display:flex;
+    gap:20px;
+}
+
+.card{
+    flex:1;
+    padding:20px;
+    background:orange;
+}
+
+@media(max-width:768px){
+
+.container{
+    flex-direction:column;
+}
+
+}
+
+.grid{
+
+display:grid;
+
+grid-template-columns:repeat(4,1fr);
+
+gap:15px;
+
+}
+
+.grid div{
+
+background:tomato;
+
+padding:20px;
+
+text-align:center;
+
+}
+
+@media(max-width:768px){
+
+.grid{
+
+grid-template-columns:repeat(2,1fr);
+
+}
+
+}
+
+@media(max-width:480px){
+
+.grid{
+
+grid-template-columns:1fr;
+
+}
+
+}
+
+img{
+
+max-width:100%;
+
+height:auto;
+
+}
+
+
+/* Default styles (Desktop First) */
+
+body{
+    margin:0;
+    font-family:Arial, sans-serif;
+    background:#f4f4f4;
+}
+
+.container{
+    width:80%;
+    margin:50px auto;
+    padding:30px;
+    text-align:center;
+    background:steelblue;
+    color:white;
+    border-radius:10px;
+}
+
+/* Desktop */
+@media (min-width:993px){
+
+.container{
+    background:steelblue;
+    font-size:24px;
+}
+
+}
+
+/* Laptop */
+@media (min-width:769px) and (max-width:992px){
+
+.container{
+    background:green;
+    font-size:22px;
+}
+
+}
+
+/* Tablet */
+@media (min-width:577px) and (max-width:768px){
+
+.container{
+    background:orange;
+    font-size:20px;
+}
+
+}
+
+/* Mobile */
+@media (max-width:576px){
+
+.container{
+    background:crimson;
+    font-size:18px;
+    width:95%;
+}
+
+}
+
+/* Mobile first approach */
+/* Mobile (default) */
+.container{
+    width:100%;
+}
+
+/* Tablet */
+@media(min-width:577px){
+.container{
+    width:90%;
+}
+}
+
+/* Laptop */
+@media(min-width:769px){
+.container{
+    width:80%;
+}
+}
+
+/* Desktop */
+@media(min-width:993px){
+.container{
+    width:70%;
+}
+}
