@@ -1,0 +1,105 @@
+/* Styling a Heading */
+h1 {
+    color: darkblue;
+    text-align: center;
+    font-size: 40px;
+}
+
+/* Styling a Heading */
+p {
+    color: green;
+    font-size: 20px;
+    line-height: 1.8;
+}
+
+/* Styling a Button */
+button {
+    background-color: royalblue;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 8px;
+}
+
+/* CSS3 Features */
+.box {
+    border: 2px solid black;
+    border-radius: 15px;
+}
+
+/* Box Shadow */
+.box {
+    box-shadow: 5px 5px 10px gray;
+}
+
+/* Text Shadow */
+h1 {
+    text-shadow: 2px 2px 5px gray;
+}
+
+/* Gradients */
+/* body {
+    background: linear-gradient(to right, blue, purple);
+} */
+
+/* Transitions */
+/* /* button {
+    background: blue;
+    transition: background 0.5s;
+} */
+
+button:hover {
+    background: red;
+} */
+
+/* Animations */
+/* @keyframes move {
+    from {
+        margin-left: 0;
+    }
+
+    to {
+        margin-left: 200px;
+    }
+}
+.box {
+    animation: move 3s infinite;
+} */
+
+/* Flexbox */
+.container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+/* CSS Grid */
+.container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+
+/* Media Queries (Responsive Design) */
+@media (max-width: 768px) {
+    body {
+        background-color: lightblue;
+    }
+}
+
+/* Transform */
+.box:hover {
+    transform: scale(1.2);
+}
+
+/* external css */
+h1 {
+    color: purple;
+    text-align: center;
+}
+
+p {
+    color: blue;
+    font-size: 18px;
+}
+
