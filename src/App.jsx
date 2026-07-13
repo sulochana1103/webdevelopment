@@ -1,48 +1,45 @@
- import React from 'react'
-//import A from './day28Task-9-07-2026/localstate/useState/A'
-//import B from './day28Task-9-07-2026/localstate/useState/B'
-//import A from './day28Task-9-07-2026/globalstate/contextApi/A'
-// import A from './day28Task-9-07-2026/localState1/A'
-//import Home from './day28Task-9-07-2026/globalState1/Home'
-import UserProvider from './day28Task-9-07-2026/contextApi/UserContext'
-// import Profile from './day28Task-9-07-2026/contextApi/UserContext'
-// import UserContext from './day28Task-9-07-2026/contextApi/UserContext'
-// import Header from './day28Task-9-07-2026/contextApi/Header'
-// import Dashboard from './day28Task-9-07-2026/contextApi/Dashboard'
-// import Employees from './day29Task-10-07-2026/Employee'
-// import EmployeeForm from './day29Task-10-07-2026/EmployeeForm'
-// import UpdateEmployee from './UpdateEmployee'
-//import Users from './day29Task-10-07-2026/User'
-//import Dashboard from './day28Task-9-07-2026/contextApi/Profile'
-// import Users from './day29Task-10-07-2026/HttpMethods/Get'
-import A from "./day30Task-13-07-2026/contextApi/A";
+import StudentContext from './day30Task-13-07-2026/SharedatabetweenmultiplecomponentsusingContextApi/StudentContext';
+import Home from './day30Task-13-07-2026/SharedatabetweenmultiplecomponentsusingContextApi/Home';
+import Profile from './day30Task-13-07-2026/SharedatabetweenmultiplecomponentsusingContextApi/Profile';
+import Dashboard from './day30Task-13-07-2026/SharedatabetweenmultiplecomponentsusingContextApi/Dashboard';
+import Header from './day30Task-13-07-2026/CreateThemeContext/Header';
+import { ThemeProvider } from './day30Task-13-07-2026/CreateThemeContext/ThemeContext';
+import { AuthProvider } from './day30Task-13-07-2026/UserAuthentication/AuthContext';
+import Navbar from './day30Task-13-07-2026/UserAuthentication/Navbar';
+
 function App() {
-  const user = "Sulochana";
+  const student = "Sulochana";
+
+  // const user = "Sulochana";
+
+  // const [name, setName] = useState("Sulochana");
+
   return (
-    <div>
-      {/* <A/>
-      <B/> */}
-      {/* <A/> */}
-      {/* <A/> */}
-      {/* <UserProvider>
-      {/* <Home /> */}
-      {/* <Profile />
-    </UserProvider> */}
-      {/* <Profile /> */}
-      {/* <UserContext.Provider value={user}>
-      <Header />
-    </UserContext.Provider> */}
-    {/* <Employees/> */}
-    {/* <EmployeeForm/> */}
-    {/* <UpdateEmployee/> */}
-    {/* <Users/> */}
-    {/* <Post/> */}
-    {/* <A/> */}
-    <A/>
-      </div>
-  )
+    // <StudentContext.Provider value={student}>
+    //   <Home />
+    //   <Profile />
+    //   <Dashboard />
+    // </StudentContext.Provider>
+
+    // <UserContext.Provider value={user}>
+    //   <Dashboard />
+    //   <Profile />
+    // </UserContext.Provider>
+
+    // <ThemeProvider>
+    //   <Header />
+    // </ThemeProvider>
+
+    <AuthProvider>
+      <Navbar />
+    </AuthProvider>
+
+    // <StudentContext.Provider value={student}>
+    //   <Home />
+    //   <Profile />
+    //   <Dashboard />
+    // </StudentContext.Provider>
+  );
 }
 
-export default App
-
-
+export default App;
