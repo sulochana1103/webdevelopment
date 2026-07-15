@@ -9,21 +9,34 @@
 //import { store } from './day31Task-14-07-2026/CreateReduxStoreandReducers/Store'
 //import { Provider } from 'react-redux';
 
+//import A from "./day32Task-15-07-2026/useReducre/A";
+import { useReducer } from "react";
+//import A, { initialState, reducer } from "./day32Task-15-07-2026/useReducre/Createreducerfunctionswithdifferentactiontypes/CounterReducer/Reducer";
+
 import { useSelector, useDispatch } from "react-redux";
+import Counter from "./day32Task-15-07-2026/Example/Counter";
+import ShoppingCart from "./day32Task-15-07-2026/Example/Shoppingcart";
+import Form from "./day32Task-15-07-2026/Example/Formhandling";
 //import { increment } from "./day31Task-14-07-2026/CreateReduxStoreandReducers/CounterSlice";
 //import { changeTheme } from './day31Task-14-07-2026/UnderstandActionsandDispatchmethods/ThemeSlice';
-import { decrement, increment, reset } from "./day31Task-14-07-2026/Example/CounterSlice1";
+//import { decrement, increment, reset } from "./day31Task-14-07-2026/Example/CounterSlice1";
 
 function App() {
+
+  //const [state, dispatch] = useReducer(reducer, initialState);
+
+  //  const dispatch = useDispatch();
+  //  const count = useSelector((state) => state.count);
+
   // const count = useSelector((state) => state.counter.count);
   // const dispatch = useDispatch();
-   
-  
+
+
   // const currentTheme = useSelector((state) => state.theme.theme);
   // const dispatch = useDispatch();
 
-  const count = useSelector((state) => state.counter.count);
-  const dispatch = useDispatch();
+  // const count = useSelector((state) => state.counter.count);
+  // const dispatch = useDispatch();
 
   // const student = "Sulochana";
 
@@ -32,6 +45,8 @@ function App() {
   // const [name, setName] = useState("Sulochana");
 
   return (
+
+    
     // <StudentContext.Provider value={student}>
     //   <Home />
     //   <Profile />
@@ -73,19 +88,86 @@ function App() {
     //   </button>
     // </div>
 
-    <div style={{ textAlign: "center" }}>
-      <h1>Redux Counter</h1>
-      <h2>{count}</h2>
-      <button onClick={() => dispatch(increment())}>
-        Increment
-      </button>
-      <button onClick={() => dispatch(decrement())}>
-        Decrement
-      </button>
-      <button onClick={() => dispatch(reset())}>
-        Reset
-      </button>
+    // <div 
+    // style={{ textAlign: "center" }}>
+    //   <h1>Redux Counter</h1>
+    //   <h2>{count}</h2>
+    //   <button onClick={() => dispatch(increment())}>
+    //     Increment
+    //   </button>
+    //   <button onClick={() => dispatch(decrement())}>
+    //     Decrement
+    //   </button>
+    //   <button onClick={() => dispatch(reset())}>
+    //     Reset
+    //   </button>
+    //<provider store={store}>
+      // <>
+      // <A/>
+      // </>
+    //</provider>
+    
+    //</div >
+
+
+    // <div style={{ textAlign: "center", marginTop: "50px" }}>
+    //   <h1>useReducer Example</h1>
+
+    //   <h2>Count : {state.count}</h2>
+
+    //   <button onClick={() => dispatch({ type: "INCREMENT" })}>
+    //     Increment
+    //   </button>
+
+    //   <button
+    //     onClick={() => dispatch({ type: "DECREMENT" })}
+    //     style={{ marginLeft: "10px" }}
+    //   >
+    //     Decrement
+    //   </button>
+
+    //   <button
+    //     onClick={() => dispatch({ type: "RESET" })}
+    //     style={{ marginLeft: "10px" }}
+    //   >
+    //     Reset
+    //   </button>
+
+    //   <br />
+    //   <br />
+
+    //   <button
+    //     onClick={() =>
+    //       dispatch({
+    //         type: "INCREMENT_BY_VALUE",
+    //         payload: 5,
+    //       })
+    //     }
+    //   >
+    //     +5
+    //   </button>
+
+    //   <button
+    //     onClick={() =>
+    //       dispatch({
+    //         type: "DECREMENT_BY_VALUE",
+    //         payload: 3,
+    //       })
+    //     }
+    //     style={{ marginLeft: "10px" }}
+    //   >
+    //     -3
+    //   </button>
+    // </div>
+
+    <div>
+      <Counter />
+      <hr />
+      <Form />
+      <hr />
+      <ShoppingCart />
     </div>
+    
   );
 }
 
