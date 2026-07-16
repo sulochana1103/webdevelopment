@@ -14,12 +14,28 @@ import { useReducer } from "react";
 //import A, { initialState, reducer } from "./day32Task-15-07-2026/useReducre/Createreducerfunctionswithdifferentactiontypes/CounterReducer/Reducer";
 
 import { useSelector, useDispatch } from "react-redux";
-import Counter from "./day32Task-15-07-2026/Example/Counter";
-import ShoppingCart from "./day32Task-15-07-2026/Example/Shoppingcart";
-import Form from "./day32Task-15-07-2026/Example/Formhandling";
-//import { increment } from "./day31Task-14-07-2026/CreateReduxStoreandReducers/CounterSlice";
-//import { changeTheme } from './day31Task-14-07-2026/UnderstandActionsandDispatchmethods/ThemeSlice';
-//import { decrement, increment, reset } from "./day31Task-14-07-2026/Example/CounterSlice1";
+import AuthProvider from "./day33Task-16-07-2026/ex1/AuthContext";
+//import Navbar from "./day33Task-16-07-2026/contextapi/Navbar";
+import Login from "./day33Task-16-07-2026/reducer/Login";
+import Logout from "./day33Task-16-07-2026/ex1/Logout";
+import Navbar from "./day33Task-16-07-2026/ex1/Navbar";
+// import Counter from "./day32Task-15-07-2026/Example/Counter";
+// import ShoppingCart from "./day32Task-15-07-2026/Example/Shoppingcart";
+// import Form from "./day32Task-15-07-2026/Example/Formhandling";
+// import { CounterProvider } from "./day33Task-16-07-2026/useReducerExample/ContextApiExample/CouterContext";
+// import Student from "./day33Task-16-07-2026/Example/StudentRegistrationFormuseReducer";
+// import { UserProvider } from "./day33Task-16-07-2026/Example/ContextApi/UserContext";
+// import Header from "./day33Task-16-07-2026/Example/ContextApi/Header";
+// import Profile from "./day33Task-16-07-2026/Example/ContextApi/Profile";
+// //import Login from "./day33Task-16-07-2026/reducer/Login";
+// //import Navbar from "./day33Task-16-07-2026/contextapi/Navbar";
+// import AuthProvider from "./day33Task-16-07-2026/ex1/AuthContext";
+// import Logout from "./day33Task-16-07-2026/ex1/Logout";
+// import Navbar from "./day33Task-16-07-2026/contextapi/Navbar";
+// import Login from "./day33Task-16-07-2026/reducer/Login";
+// //import { increment } from "./day31Task-14-07-2026/CreateReduxStoreandReducers/CounterSlice";
+// //import { changeTheme } from './day31Task-14-07-2026/UnderstandActionsandDispatchmethods/ThemeSlice';
+// //import { decrement, increment, reset } from "./day31Task-14-07-2026/Example/CounterSlice1";
 
 function App() {
 
@@ -160,15 +176,61 @@ function App() {
     //   </button>
     // </div>
 
-    <div>
-      <Counter />
-      <hr />
-      <Form />
-      <hr />
-      <ShoppingCart />
-    </div>
+    // <div>
+    //   <Counter />
+    //   <hr />
+    //   <Form />
+    //   <hr />
+    //   <ShoppingCart />
+    // </div>
+
+    //  <div>
+    //   <Counter />
+    // </div>
+
+    // <CounterProvider>
+    //   <Counter />
+    // </CounterProvider>
     
+
+    //  <div>
+    //   {/* <Counter /> */}
+    //   <Student/>
+    // </div>
+
+
+    // <UserProvider>
+    //   <Header />
+    //   <Profile />
+    // </UserProvider>
+
+    // <div>
+    //   <Login />
+    // </div>
+
+    // <UserProvider>
+    //   <Navbar />
+    //   <Login />
+    //   <Profile />
+    // </UserProvider>
+
+    //  <AuthProvider>
+    //   <Navbar />
+    //   <Login />
+    //   <Logout />
+    // </AuthProvider>
+    // <UserProvider>
+    //   <Navbar />
+    // </UserProvider>
+
+     <AuthProvider>
+      <Navbar />
+      <Login />
+      <Logout />
+    </AuthProvider>
   );
 }
 
 export default App;
+
+
