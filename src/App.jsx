@@ -12,13 +12,18 @@
 //import A from "./day32Task-15-07-2026/useReducre/A";
 import { useReducer } from "react";
 //import A, { initialState, reducer } from "./day32Task-15-07-2026/useReducre/Createreducerfunctionswithdifferentactiontypes/CounterReducer/Reducer";
+import FunctionalComponent from './day34Task-17-07-2026/Examples/FunctionalComponent'
 
 import { useSelector, useDispatch } from "react-redux";
-import AuthProvider from "./day33Task-16-07-2026/ex1/AuthContext";
+// import AuthProvider from "./day33Task-16-07-2026/ex1/AuthContext";
 //import Navbar from "./day33Task-16-07-2026/contextapi/Navbar";
-import Login from "./day33Task-16-07-2026/reducer/Login";
-import Logout from "./day33Task-16-07-2026/ex1/Logout";
-import Navbar from "./day33Task-16-07-2026/ex1/Navbar";
+// import Login from "./day33Task-16-07-2026/reducer/Login";
+// import Logout from "./day33Task-16-07-2026/ex1/Logout";
+// import Navbar from "./day33Task-16-07-2026/ex1/Navbar";
+import StudentForm from "./day34Task-17-07-2026/StudentManagement/Components/StudentForm";
+import Navbar from "./day34Task-17-07-2026/StudentManagement/Components/Navbar";
+import StudentList from "./day34Task-17-07-2026/StudentManagement/Components/StudentList";
+import Footer from "./day34Task-17-07-2026/StudentManagement/Components/Footer";
 // import Counter from "./day32Task-15-07-2026/Example/Counter";
 // import ShoppingCart from "./day32Task-15-07-2026/Example/Shoppingcart";
 // import Form from "./day32Task-15-07-2026/Example/Formhandling";
@@ -223,11 +228,20 @@ function App() {
     //   <Navbar />
     // </UserProvider>
 
-     <AuthProvider>
+    //  <AuthProvider>
+    //   <Navbar />
+    //   <Login />
+    //   <Logout />
+    // </AuthProvider>
+
+    <div>
       <Navbar />
-      <Login />
-      <Logout />
-    </AuthProvider>
+      <StudentForm />
+      <StudentList />
+      <Footer />
+
+      {/* <FunctionalComponent/> */}
+    </div>
   );
 }
 

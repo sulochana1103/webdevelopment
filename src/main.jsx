@@ -3,6 +3,7 @@ import { createRoot } from 'react-dom/client'
 import './index.css'
 import App from './App.jsx'
 import AuthProvider from './day33Task-16-07-2026/ex1/AuthContext.jsx'
+import { StudentProvider } from './day34Task-17-07-2026/StudentManagement/Components/StudentContext.jsx'
 
 // import { Provider } from "react-redux";
 // import { store } from "./day31Task-14-07-2026/Example/Store.js";
@@ -19,7 +20,11 @@ createRoot(document.getElementById('root')).render(
   //   <App />
   // </Provider>
 
-  <AuthProvider>
+  // <AuthProvider>
+  //   <App />
+  // </AuthProvider>
+
+  <StudentProvider>
     <App />
-  </AuthProvider>
+  </StudentProvider>
 )
