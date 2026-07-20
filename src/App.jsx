@@ -10,20 +10,24 @@
 //import { Provider } from 'react-redux';
 
 //import A from "./day32Task-15-07-2026/useReducre/A";
-import { useReducer } from "react";
+// import { useReducer } from "react";
+// import Profile from "./day35Task-20-07-2026/CondetionalRendering/Profile";
+// import Signup from "./day35Task-20-07-2026/CondetionalRendering/Signup";
+// import Login from "./day35Task-20-07-2026/CondetionalRendering/Login";
 //import A, { initialState, reducer } from "./day32Task-15-07-2026/useReducre/Createreducerfunctionswithdifferentactiontypes/CounterReducer/Reducer";
-import FunctionalComponent from './day34Task-17-07-2026/Examples/FunctionalComponent'
+// import FunctionalComponent from './day34Task-17-07-2026/Examples/FunctionalComponent'
 
-import { useSelector, useDispatch } from "react-redux";
+// import { useSelector, useDispatch } from "react-redux";
 // import AuthProvider from "./day33Task-16-07-2026/ex1/AuthContext";
 //import Navbar from "./day33Task-16-07-2026/contextapi/Navbar";
 // import Login from "./day33Task-16-07-2026/reducer/Login";
 // import Logout from "./day33Task-16-07-2026/ex1/Logout";
 // import Navbar from "./day33Task-16-07-2026/ex1/Navbar";
-import StudentForm from "./day34Task-17-07-2026/StudentManagement/Components/StudentForm";
-import Navbar from "./day34Task-17-07-2026/StudentManagement/Components/Navbar";
-import StudentList from "./day34Task-17-07-2026/StudentManagement/Components/StudentList";
-import Footer from "./day34Task-17-07-2026/StudentManagement/Components/Footer";
+// import StudentForm from "./day34Task-17-07-2026/StudentManagement/Components/StudentForm";
+// import Navbar from "./day34Task-17-07-2026/StudentManagement/Components/Navbar";
+// import StudentList from "./day34Task-17-07-2026/StudentManagement/Components/StudentList";
+// import Footer from "./day34Task-17-07-2026/StudentManagement/Components/Footer";
+// import Profile from "./day33Task-16-07-2026/Example/ContextApi/Profile";
 // import Counter from "./day32Task-15-07-2026/Example/Counter";
 // import ShoppingCart from "./day32Task-15-07-2026/Example/Shoppingcart";
 // import Form from "./day32Task-15-07-2026/Example/Formhandling";
@@ -41,6 +45,19 @@ import Footer from "./day34Task-17-07-2026/StudentManagement/Components/Footer";
 // //import { increment } from "./day31Task-14-07-2026/CreateReduxStoreandReducers/CounterSlice";
 // //import { changeTheme } from './day31Task-14-07-2026/UnderstandActionsandDispatchmethods/ThemeSlice';
 // //import { decrement, increment, reset } from "./day31Task-14-07-2026/Example/CounterSlice1";
+
+
+import Logical from './day35Task-20-07-2026/cr/Logical'
+import UsingTernaryOperator from './day35Task-20-07-2026/cr/UsingTernaryOperator'
+import UsingIfElse from './day35Task-20-07-2026/cr/UsingIfElse'
+// import Switch from './day35Task-20-07-2026/cr/Switch'
+
+import If from './day35Task-20-07-2026/cr2/If'
+import Ter from './day35Task-20-07-2026/cr2/Ter'
+import Logindex from './day35Task-20-07-2026/cr2/Logindex'
+import Switch1 from './day35Task-20-07-2026/cr2/Switch1'
+import HideComponents from './day35Task-20-07-2026/cr2/HideComponents'
+import Login from './day35Task-20-07-2026/cr2/Login'
 
 function App() {
 
@@ -235,13 +252,32 @@ function App() {
     // </AuthProvider>
 
     <div>
-      <Navbar />
+      {/* <Navbar />
       <StudentForm />
       <StudentList />
-      <Footer />
+      <Footer /> */}
 
       {/* <FunctionalComponent/> */}
+      {/* <Profile/>
+      <Signup/>
+      <Login/> */}
+      {/* <Logical/> */}
+      {/* <UsingTernaryOperator/> */}
+      {/* <UsingIfElse/> */}
+      {/* <Switch/> */}
+
+      {/* <If/> */}
+      {/* <Ter/> */}
+      {/* <Logindex/> */}
+      {/* <Switch1/> */}
+      {/* <HideComponents/> */}
+      <Login/>
     </div>
+    // <provider store={store}>
+    //   <>
+    //   <Profile/>
+    //   </>
+    // </provider>
   );
 }
 
