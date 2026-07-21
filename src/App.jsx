@@ -47,17 +47,27 @@
 // //import { decrement, increment, reset } from "./day31Task-14-07-2026/Example/CounterSlice1";
 
 
-import Logical from './day35Task-20-07-2026/cr/Logical'
-import UsingTernaryOperator from './day35Task-20-07-2026/cr/UsingTernaryOperator'
-import UsingIfElse from './day35Task-20-07-2026/cr/UsingIfElse'
+// import Logical from './day35Task-20-07-2026/cr/Logical'
+// import UsingTernaryOperator from './day35Task-20-07-2026/cr/UsingTernaryOperator'
+// import UsingIfElse from './day35Task-20-07-2026/cr/UsingIfElse'
 // import Switch from './day35Task-20-07-2026/cr/Switch'
 
-import If from './day35Task-20-07-2026/cr2/If'
-import Ter from './day35Task-20-07-2026/cr2/Ter'
-import Logindex from './day35Task-20-07-2026/cr2/Logindex'
-import Switch1 from './day35Task-20-07-2026/cr2/Switch1'
-import HideComponents from './day35Task-20-07-2026/cr2/HideComponents'
-import Login from './day35Task-20-07-2026/cr2/Login'
+// import If from './day35Task-20-07-2026/cr2/If'
+// import Ter from './day35Task-20-07-2026/cr2/Ter'
+// import Logindex from './day35Task-20-07-2026/cr2/Logindex'
+// import Switch1 from './day35Task-20-07-2026/cr2/Switch1'
+// import HideComponents from './day35Task-20-07-2026/cr2/HideComponents'
+// import Login from './day35Task-20-07-2026/cr2/Login'
+// import A from './day36Task-21-07-2026/useEffect/A'
+import FetchUsers from './day36Task-21-07-2026/ApiCallusingFetch';
+import Data from './day36Task-21-07-2026/DisplayLocalDatausingmap';
+import DisplayApiDatausingFetch from './day36Task-21-07-2026/DisplayLocalDatausingmap/DisplayApiDatausingFetch';
+import StudentList from './day36Task-21-07-2026/HandleloadinganderrorstatesduringApiIntegration/StudentManagementSystem';
+import CleanupFunctioninUseEffect from './day36Task-21-07-2026/useEffect/Practice/CleanupFunctioninUseEffect';
+import UseEffectwithDependencies from './day36Task-21-07-2026/useEffect/Practice/UseEffectwithDependencies';
+import UseEffectwithEmptyDependencyArray from './day36Task-21-07-2026/useEffect/Practice/UseEffectwithEmptyDependencyArray';
+import UseEffectwithoutDependencyArray from './day36Task-21-07-2026/useEffect/Practice/UseEffectwithoutdependencyarray';
+import useEffectwithoutDependencyArray from './day36Task-21-07-2026/useEffect/Practice/UseEffectwithoutdependencyarray'
 
 function App() {
 
@@ -271,7 +281,16 @@ function App() {
       {/* <Logindex/> */}
       {/* <Switch1/> */}
       {/* <HideComponents/> */}
-      <Login/>
+      {/* <Login/> */}
+      {/* <A/> */}
+      <UseEffectwithoutDependencyArray/>
+      <UseEffectwithEmptyDependencyArray/>
+      <UseEffectwithDependencies/>
+      {/* <CleanupFunctioninUseEffect/>  */}
+      <FetchUsers/>
+      <DisplayApiDatausingFetch/>
+      <Data/>  
+      <StudentList/>
     </div>
     // <provider store={store}>
     //   <>
