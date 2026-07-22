@@ -1,6 +1,9 @@
 import React from 'react'
 
 function Login({value}) {
+  useEffect(()=>{
+    console.log("Profile page")
+  })
      console.log(value)
     let handlesubmit=(e)=>{
         e.preventDefault()
