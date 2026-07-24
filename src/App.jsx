@@ -458,31 +458,111 @@
 
 
 //Example
-import { useEffect, useState } from "react";
-import Users from "./day38Task-23-07-2026/Example/Users";
-import withLoading from "./day38Task-23-07-2026/Example/withLoading";
+// import { useEffect, useState } from "react";
+// import Users from "./day38Task-23-07-2026/Example/Users";
+// import withLoading from "./day38Task-23-07-2026/Example/withLoading";
 
-const UsersWithLoading = withLoading(Users);
+// const UsersWithLoading = withLoading(Users);
+
+// function App() {
+//   const [users, setUsers] = useState([]);
+//   const [isLoading, setIsLoading] = useState(true);
+
+//   useEffect(() => {
+//     fetch("https://jsonplaceholder.typicode.com/users")
+//       .then((response) => response.json())
+//       .then((data) => {
+//         setUsers(data);
+//         setIsLoading(false);
+//       });
+//   }, []);
+
+//   return (
+//     <UsersWithLoading
+//       users={users}
+//       isLoading={isLoading}
+//     />
+//   );
+// }
+
+// export default App
+
+// import React from 'react'
+// import Usingif from './day39Task-24-07-2026/ConditionalRendering/Usingif'
+// import LoginPage from './day39Task-24-07-2026/ConditionalRendering/LoginPage'
+// import Logical from './day39Task-24-07-2026/ConditionalRendering/Logical'
+// import Ternary from './day39Task-24-07-2026/ConditionalRendering/Ternary'
+// import LoadingSpinner from './day39Task-24-07-2026/ConditionalRendering/LoadingSpinner'
+// // import Users from './day39Task-24-07-2026/ConditionalRendering/FetchUsersusingFetchAPI'
+
+
+// function App() {
+//   return (
+//     <div>App
+//       <Usingif/>
+//       <LoginPage/>
+//       <Logical/>
+//       <Ternary/>
+//       <LoadingSpinner/>
+//       {/* <Users/>  */}
+//       {/* <Users/> */}
+//       <Users/>
+      
+//     </div>
+//   )
+// }
+// import Users from './day39Task-24-07-2026/FetchUsersusingAxios'
+
+// export default App 
+
+
+import { useEffect, useState } from "react";
+import StudentList from "./day39Task-24-07-2026/Example/StudentList";
+import StudentForm from "./day39Task-24-07-2026/Example/StudentForm";
+import withLoading from "./day39Task-24-07-2026/Example/withLoading";
+import { getStudents } from "./day39Task-24-07-2026/Example/Api";
+
+const StudentListWithLoading = withLoading(StudentList);
 
 function App() {
-  const [users, setUsers] = useState([]);
-  const [isLoading, setIsLoading] = useState(true);
+  const [students, setStudents] = useState([]);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState("");
 
   useEffect(() => {
-    fetch("https://jsonplaceholder.typicode.com/users")
-      .then((response) => response.json())
-      .then((data) => {
-        setUsers(data);
-        setIsLoading(false);
-      });
+    async function fetchStudents() {
+      try {
+        const data = await getStudents();
+
+        setStudents(data);
+      } catch (err) {
+        setError("Failed to fetch students");
+      } finally {
+        setLoading(false);
+      }
+    }
+
+    fetchStudents();
   }, []);
 
   return (
-    <UsersWithLoading
-      users={users}
-      isLoading={isLoading}
-    />
+    <div>
+      <h1>Student Management System</h1>
+
+      <StudentForm />
+
+      <hr />
+
+      {error ? (
+        <h2>{error}</h2>
+      ) : (
+        <StudentListWithLoading
+          loading={loading}
+          students={students}
+        />
+      )}
+    </div>
   );
 }
 
-export default App
+export default App;
