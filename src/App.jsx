@@ -516,53 +516,85 @@
 // export default App 
 
 
-import { useEffect, useState } from "react";
-import StudentList from "./day39Task-24-07-2026/Example/StudentList";
-import StudentForm from "./day39Task-24-07-2026/Example/StudentForm";
-import withLoading from "./day39Task-24-07-2026/Example/withLoading";
-import { getStudents } from "./day39Task-24-07-2026/Example/Api";
+// import { useEffect, useState } from "react";
+// import StudentList from "./day39Task-24-07-2026/Example/StudentList";
+// import StudentForm from "./day39Task-24-07-2026/Example/StudentForm";
+// import withLoading from "./day39Task-24-07-2026/Example/withLoading";
+// import { getStudents } from "./day39Task-24-07-2026/Example/Api";
 
-const StudentListWithLoading = withLoading(StudentList);
+// const StudentListWithLoading = withLoading(StudentList);
+
+// function App() {
+//   const [students, setStudents] = useState([]);
+//   const [loading, setLoading] = useState(true);
+//   const [error, setError] = useState("");
+
+//   useEffect(() => {
+//     async function fetchStudents() {
+//       try {
+//         const data = await getStudents();
+
+//         setStudents(data);
+//       } catch (err) {
+//         setError("Failed to fetch students");
+//       } finally {
+//         setLoading(false);
+//       }
+//     }
+
+//     fetchStudents();
+//   }, []);
+
+//   return (
+//     <div>
+//       <h1>Student Management System</h1>
+
+//       <StudentForm />
+
+//       <hr />
+
+//       {error ? (
+//         <h2>{error}</h2>
+//       ) : (
+//         <StudentListWithLoading
+//           loading={loading}
+//           students={students}
+//         />
+//       )}
+//     </div>
+//   );
+// }
+
+// export default App;
+
+
+import React from 'react'
+import FetchThen from './day40Task-27-07-2026/APIcallsusingFetchAPIandAxios/FetchAPIusingthenandcatch'
+import FetchAsync from './day40Task-27-07-2026/APIcallsusingFetchAPIandAxios/FetchAPIusingAsync'
+import FetchUseEffect from './day40Task-27-07-2026/APIcallsusingFetchAPIandAxios/FetchAPIusinguseEffect'
+import FetchUseEffectAsync from './day40Task-27-07-2026/APIcallsusingFetchAPIandAxios/FetchAPIusingAsyncinsideuseEffect'
+import GetFetch from './day40Task-27-07-2026/PerformGET,POST,PUT,PATCH,andDELETErequests/GetusingfetchApi'
+import PostFetch from './day40Task-27-07-2026/PerformGET,POST,PUT,PATCH,andDELETErequests/PostRequestusingFetchApi'
+import PutFetch from './day40Task-27-07-2026/PerformGET,POST,PUT,PATCH,andDELETErequests/PutRequestusingFetchApi'
+import PatchFetch from './day40Task-27-07-2026/PerformGET,POST,PUT,PATCH,andDELETErequests/PatchRequestusingFetchApi'
+import DeleteFetch from './day40Task-27-07-2026/PerformGET,POST,PUT,PATCH,andDELETErequests/DeleteRequestusingFetchApi'
+import FetchLoading from './day40Task-27-07-2026/Handleloading,success,anderrorstates/FetchLoading'
 
 function App() {
-  const [students, setStudents] = useState([]);
-  const [loading, setLoading] = useState(true);
-  const [error, setError] = useState("");
-
-  useEffect(() => {
-    async function fetchStudents() {
-      try {
-        const data = await getStudents();
-
-        setStudents(data);
-      } catch (err) {
-        setError("Failed to fetch students");
-      } finally {
-        setLoading(false);
-      }
-    }
-
-    fetchStudents();
-  }, []);
-
   return (
-    <div>
-      <h1>Student Management System</h1>
-
-      <StudentForm />
-
-      <hr />
-
-      {error ? (
-        <h2>{error}</h2>
-      ) : (
-        <StudentListWithLoading
-          loading={loading}
-          students={students}
-        />
-      )}
+    <div>App
+      <FetchThen/> 
+      <FetchAsync/>
+      <FetchUseEffect/>
+      <FetchUseEffectAsync/>
+      <GetFetch/>
+      <PostFetch/>
+      <PutFetch/>
+      <PatchFetch/>
+      <DeleteFetch/>
+      <FetchLoading/>
     </div>
-  );
+  )
 }
 
-export default App;
+export default App
