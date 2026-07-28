@@ -568,33 +568,95 @@
 // export default App;
 
 
-import React from 'react'
-import FetchThen from './day40Task-27-07-2026/APIcallsusingFetchAPIandAxios/FetchAPIusingthenandcatch'
-import FetchAsync from './day40Task-27-07-2026/APIcallsusingFetchAPIandAxios/FetchAPIusingAsync'
-import FetchUseEffect from './day40Task-27-07-2026/APIcallsusingFetchAPIandAxios/FetchAPIusinguseEffect'
-import FetchUseEffectAsync from './day40Task-27-07-2026/APIcallsusingFetchAPIandAxios/FetchAPIusingAsyncinsideuseEffect'
-import GetFetch from './day40Task-27-07-2026/PerformGET,POST,PUT,PATCH,andDELETErequests/GetusingfetchApi'
-import PostFetch from './day40Task-27-07-2026/PerformGET,POST,PUT,PATCH,andDELETErequests/PostRequestusingFetchApi'
-import PutFetch from './day40Task-27-07-2026/PerformGET,POST,PUT,PATCH,andDELETErequests/PutRequestusingFetchApi'
-import PatchFetch from './day40Task-27-07-2026/PerformGET,POST,PUT,PATCH,andDELETErequests/PatchRequestusingFetchApi'
-import DeleteFetch from './day40Task-27-07-2026/PerformGET,POST,PUT,PATCH,andDELETErequests/DeleteRequestusingFetchApi'
-import FetchLoading from './day40Task-27-07-2026/Handleloading,success,anderrorstates/FetchLoading'
+// import React from 'react'
+// import FetchThen from './day40Task-27-07-2026/APIcallsusingFetchAPIandAxios/FetchAPIusingthenandcatch'
+// import FetchAsync from './day40Task-27-07-2026/APIcallsusingFetchAPIandAxios/FetchAPIusingAsync'
+// import FetchUseEffect from './day40Task-27-07-2026/APIcallsusingFetchAPIandAxios/FetchAPIusinguseEffect'
+// import FetchUseEffectAsync from './day40Task-27-07-2026/APIcallsusingFetchAPIandAxios/FetchAPIusingAsyncinsideuseEffect'
+// import GetFetch from './day40Task-27-07-2026/PerformGET,POST,PUT,PATCH,andDELETErequests/GetusingfetchApi'
+// import PostFetch from './day40Task-27-07-2026/PerformGET,POST,PUT,PATCH,andDELETErequests/PostRequestusingFetchApi'
+// import PutFetch from './day40Task-27-07-2026/PerformGET,POST,PUT,PATCH,andDELETErequests/PutRequestusingFetchApi'
+// import PatchFetch from './day40Task-27-07-2026/PerformGET,POST,PUT,PATCH,andDELETErequests/PatchRequestusingFetchApi'
+// import DeleteFetch from './day40Task-27-07-2026/PerformGET,POST,PUT,PATCH,andDELETErequests/DeleteRequestusingFetchApi'
+// import FetchLoading from './day40Task-27-07-2026/Handleloading,success,anderrorstates/FetchLoading'
 
-function App() {
-  return (
-    <div>App
-      <FetchThen/> 
-      <FetchAsync/>
-      <FetchUseEffect/>
-      <FetchUseEffectAsync/>
-      <GetFetch/>
-      <PostFetch/>
-      <PutFetch/>
-      <PatchFetch/>
-      <DeleteFetch/>
-      <FetchLoading/>
-    </div>
-  )
+// function App() {
+//   return (
+//     <div>App
+//       <FetchThen/> 
+//       <FetchAsync/>
+//       <FetchUseEffect/>
+//       <FetchUseEffectAsync/>
+//       <GetFetch/>
+//       <PostFetch/>
+//       <PutFetch/>
+//       <PatchFetch/>
+//       <DeleteFetch/>
+//       <FetchLoading/>
+//     </div>
+//   )
+// }
+
+// export default App
+
+
+
+import React, { Component } from "react";
+import Child from "./day41Task-28-07-2026/Child";
+import Fragment from './day41Task-28-07-2026/Fragment'
+import FullSyntaxFragment from './day41Task-28-07-2026/FullSyntaxFragment'
+import Employee from "./day41Task-28-07-2026/EmployeeList";
+import withLoading from "./day41Task-28-07-2026/LoadingSpinner/WithLoading";
+import UserList from "./day41Task-28-07-2026/LoadingSpinner/UserList";
+import withAuthentication from "./day41Task-28-07-2026/Authentication/withAuthentication";
+import Dashboard from "./day41Task-28-07-2026/Authentication/Dashboard";
+import Counter from "./day41Task-28-07-2026/CounterHook/Counter";
+import withBorder from "./day41Task-28-07-2026/UseofFragmentsHocandCustomHooks/Create HOC/WithBorder";
+import Welcome from "./day41Task-28-07-2026/UseofFragmentsHocandCustomHooks/CreateWelcomeComponent/Welcome";
+
+const UserListWithLoading = withLoading(UserList);
+
+const ProtectedDashboard = withAuthentication(Dashboard);
+
+const EnhancedWelcome = withBorder(Welcome);
+
+class App extends Component {
+
+ 
+  state = {
+    name: "React",
+  };
+
+  render() {
+
+    <UserListWithLoading isLoading={true} />;
+
+    return (
+      <>
+        <Child name={this.state.name} />
+        <Fragment/>
+        <FullSyntaxFragment/>
+
+        <h2>Employees</h2>
+
+      <Employee name="John" department="IT" />
+      <Employee name="Alice" department="HR" />
+      <Employee name="David" department="Finance" />
+
+      <ProtectedDashboard/>
+
+      <Counter/>
+
+      <h1>React Concepts Demo</h1>
+
+      <EnhancedWelcome />
+      
+
+      <UserList />
+        
+      </>
+    );
+  }
 }
 
-export default App
+export default App;
