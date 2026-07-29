@@ -601,62 +601,197 @@
 
 
 
-import React, { Component } from "react";
-import Child from "./day41Task-28-07-2026/Child";
-import Fragment from './day41Task-28-07-2026/Fragment'
-import FullSyntaxFragment from './day41Task-28-07-2026/FullSyntaxFragment'
-import Employee from "./day41Task-28-07-2026/EmployeeList";
-import withLoading from "./day41Task-28-07-2026/LoadingSpinner/WithLoading";
-import UserList from "./day41Task-28-07-2026/LoadingSpinner/UserList";
-import withAuthentication from "./day41Task-28-07-2026/Authentication/withAuthentication";
-import Dashboard from "./day41Task-28-07-2026/Authentication/Dashboard";
-import Counter from "./day41Task-28-07-2026/CounterHook/Counter";
-import withBorder from "./day41Task-28-07-2026/UseofFragmentsHocandCustomHooks/Create HOC/WithBorder";
-import Welcome from "./day41Task-28-07-2026/UseofFragmentsHocandCustomHooks/CreateWelcomeComponent/Welcome";
+// import React, { Component } from "react";
+// import Child from "./day41Task-28-07-2026/Child";
+// import Fragment from './day41Task-28-07-2026/Fragment'
+// import FullSyntaxFragment from './day41Task-28-07-2026/FullSyntaxFragment'
+// import Employee from "./day41Task-28-07-2026/EmployeeList";
+// import withLoading from "./day41Task-28-07-2026/LoadingSpinner/WithLoading";
+// import UserList from "./day41Task-28-07-2026/LoadingSpinner/UserList";
+// import withAuthentication from "./day41Task-28-07-2026/Authentication/withAuthentication";
+// import Dashboard from "./day41Task-28-07-2026/Authentication/Dashboard";
+// import Counter from "./day41Task-28-07-2026/CounterHook/Counter";
+// import withBorder from "./day41Task-28-07-2026/UseofFragmentsHocandCustomHooks/Create HOC/WithBorder";
+// import Welcome from "./day41Task-28-07-2026/UseofFragmentsHocandCustomHooks/CreateWelcomeComponent/Welcome";
 
-const UserListWithLoading = withLoading(UserList);
+// const UserListWithLoading = withLoading(UserList);
 
-const ProtectedDashboard = withAuthentication(Dashboard);
+// const ProtectedDashboard = withAuthentication(Dashboard);
 
-const EnhancedWelcome = withBorder(Welcome);
+// const EnhancedWelcome = withBorder(Welcome);
 
-class App extends Component {
+// class App extends Component {
 
  
-  state = {
-    name: "React",
-  };
+//   state = {
+//     name: "React",
+//   };
 
-  render() {
+//   render() {
 
-    <UserListWithLoading isLoading={true} />;
+//     <UserListWithLoading isLoading={true} />;
 
-    return (
-      <>
-        <Child name={this.state.name} />
-        <Fragment/>
-        <FullSyntaxFragment/>
+//     return (
+//       <>
+//         <Child name={this.state.name} />
+//         <Fragment/>
+//         <FullSyntaxFragment/>
 
-        <h2>Employees</h2>
+//         <h2>Employees</h2>
 
-      <Employee name="John" department="IT" />
-      <Employee name="Alice" department="HR" />
-      <Employee name="David" department="Finance" />
+//       <Employee name="John" department="IT" />
+//       <Employee name="Alice" department="HR" />
+//       <Employee name="David" department="Finance" />
 
-      <ProtectedDashboard/>
+//       <ProtectedDashboard/>
 
-      <Counter/>
+//       <Counter/>
 
-      <h1>React Concepts Demo</h1>
+//       <h1>React Concepts Demo</h1>
 
-      <EnhancedWelcome />
+//       <EnhancedWelcome />
       
 
-      <UserList />
+//       <UserList />
         
-      </>
-    );
-  }
+//       </>
+//     );
+//   }
+// }
+
+// export default App;
+
+
+
+// import React, { Component, useState } from "react";
+// import Child from "./day42Task-29-07-2026/PureComponents/Child";
+// import Child1 from './day42Task-29-07-2026/NormalComponent/Child1'
+// import Child2 from "./day42Task-29-07-2026/PureComponents1/Child2";
+// import ProductCard from "./day42Task-29-07-2026/ReactMemo/ProductCard";
+
+
+// class App extends Component {
+
+//   state = {
+//     count: 0,
+//   };
+
+//   increase = () => {
+//     this.setState({
+//       count: this.state.count + 1,
+//     });
+//   };
+
+//   render() {
+//     console.log("App Rendered");
+
+//     return (
+//       <div>
+//         <h2>Count: {this.state.count}</h2>
+
+//         <button onClick={this.increase}>
+//           Increase
+//         </button>
+
+//         <Child name="Sulochana" />
+
+
+//         <Child1/>
+
+//         <Child2/>
+
+//         <ProductCard/>
+
+         
+//       </div>
+//     );
+//   }
+// }
+// export default App;
+
+
+
+// import React, { useState } from "react";
+// import Child from "./day42Task-29-07-2026/WithoutReactMemo/Child3";
+// import Child4 from './day42Task-29-07-2026/ReactMemo/Child4'
+
+// function App() {
+//   // const [count, setCount] = useState(0);
+
+//   const [count, setCount] = useState(0);
+//   console.log("Parent Render");
+
+//   return (
+    // <>
+    //   <button onClick={() => setCount(count + 1)}>
+    //     Increment
+    //   </button>
+
+    //   <Child count={count} />
+    // </>
+
+//     <>
+//       <h2>Count: {count}</h2>
+
+//       <button onClick={() => setCount(count + 1)}>
+//         Increment
+//       </button>
+
+//       <Child name="Sulochana" />
+//     </>
+//   );
+// }
+
+// export default App;
+
+
+import React, { useState, useMemo, useCallback } from "react";
+import EmployeeCard from "./day42Task-29-07-2026/Mini/EmployeeCard";
+import SalaryCalculator from "./day42Task-29-07-2026/Mini/SalaryCalculator";
+import AddEmployee from "./day42Task-29-07-2026/Mini/AddEmployee";
+import EmployeeClass from "./day42Task-29-07-2026/Mini/EmployeeClass";
+
+function App() {
+  const [count, setCount] = useState(0);
+
+  // useMemo
+  const employee = useMemo(() => {
+    console.log("Creating Employee Object");
+
+    return {
+      name: "Sulochana",
+      salary: 50000,
+    };
+  }, []);
+
+  // useCallback
+  const addEmployee = useCallback(() => {
+    alert("Employee Added Successfully");
+  }, []);
+
+  console.log("App Render");
+
+  return (
+    <div style={{ padding: "20px" }}>
+      <h1>Employee Dashboard</h1>
+
+      <h2>Counter : {count}</h2>
+
+      <button onClick={() => setCount(count + 1)}>
+        Increment Counter
+      </button>
+
+      <hr />
+
+      <EmployeeClass name={employee.name} />
+
+      <EmployeeCard employee={employee} />
+
+      <SalaryCalculator salary={employee.salary} />
+
+      <AddEmployee addEmployee={addEmployee} />
+    </div>
+  );
 }
 
 export default App;
