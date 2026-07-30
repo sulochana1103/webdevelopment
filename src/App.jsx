@@ -745,53 +745,120 @@
 // export default App;
 
 
-import React, { useState, useMemo, useCallback } from "react";
-import EmployeeCard from "./day42Task-29-07-2026/Mini/EmployeeCard";
-import SalaryCalculator from "./day42Task-29-07-2026/Mini/SalaryCalculator";
-import AddEmployee from "./day42Task-29-07-2026/Mini/AddEmployee";
-import EmployeeClass from "./day42Task-29-07-2026/Mini/EmployeeClass";
+// import React, { useState, useMemo, useCallback } from "react";
+// import EmployeeCard from "./day42Task-29-07-2026/Mini/EmployeeCard";
+// import SalaryCalculator from "./day42Task-29-07-2026/Mini/SalaryCalculator";
+// import AddEmployee from "./day42Task-29-07-2026/Mini/AddEmployee";
+// import EmployeeClass from "./day42Task-29-07-2026/Mini/EmployeeClass";
+
+// function App() {
+//   const [count, setCount] = useState(0);
+
+//   // useMemo
+//   const employee = useMemo(() => {
+//     console.log("Creating Employee Object");
+
+//     return {
+//       name: "Sulochana",
+//       salary: 50000,
+//     };
+//   }, []);
+
+//   // useCallback
+//   const addEmployee = useCallback(() => {
+//     alert("Employee Added Successfully");
+//   }, []);
+
+//   console.log("App Render");
+
+//   return (
+//     <div style={{ padding: "20px" }}>
+//       <h1>Employee Dashboard</h1>
+
+//       <h2>Counter : {count}</h2>
+
+//       <button onClick={() => setCount(count + 1)}>
+//         Increment Counter
+//       </button>
+
+//       <hr />
+
+//       <EmployeeClass name={employee.name} />
+
+//       <EmployeeCard employee={employee} />
+
+//       <SalaryCalculator salary={employee.salary} />
+
+//       <AddEmployee addEmployee={addEmployee} />
+//     </div>
+//   );
+// }
+
+// export default App;
+
+
+
+// import { useState } from "react";
+// import Modal from "./day43Task-30-07-2026/ReactPortals/Modal";
+
+// function App() {
+
+//   return (
+//     <>
+//     <div>
+//       <h1>React Portals Demo</h1>
+//       <Modal />
+//     </div>
+//     </>
+//   );
+// }
+
+// export default App;
+
+
+import { useState } from "react";
+import Notification from "./day43Task-30-07-2026/PortalNotification/Notification";
+import LoginFunctional from "./day43Task-30-07-2026/EventBinding/LoginFunctional";
+import Modal from "./day43Task-30-07-2026/Practice/Modal";
 
 function App() {
-  const [count, setCount] = useState(0);
+  const [showNotification, setShowNotification] = useState(false);
 
-  // useMemo
-  const employee = useMemo(() => {
-    console.log("Creating Employee Object");
+  const [showModal, setShowModal] = useState(false);
 
-    return {
-      name: "Sulochana",
-      salary: 50000,
-    };
-  }, []);
 
-  // useCallback
-  const addEmployee = useCallback(() => {
-    alert("Employee Added Successfully");
-  }, []);
-
-  console.log("App Render");
-
+  function handleLogin() {
+    console.log("Login Successful"); // Console output
+    setShowNotification(true);       // Show portal notification
+  }
   return (
-    <div style={{ padding: "20px" }}>
-      <h1>Employee Dashboard</h1>
+    <>
+    <div style={{ textAlign: "center", marginTop: "100px" }}>
+      <h1>Login Page</h1>
+      <button onClick={handleLogin}>
+        Login
+      </button>
+      {showNotification && <Notification />}
+    </div>
 
-      <h2>Counter : {count}</h2>
+    <div>
+      <LoginFunctional />
+    </div>
 
-      <button onClick={() => setCount(count + 1)}>
-        Increment Counter
+    <div style={{ textAlign: "center", marginTop: "50px" }}>
+      <h1>React Portal Example</h1>
+
+      <button onClick={() => setShowModal(true)}>
+        Open Modal
       </button>
 
-      <hr />
-
-      <EmployeeClass name={employee.name} />
-
-      <EmployeeCard employee={employee} />
-
-      <SalaryCalculator salary={employee.salary} />
-
-      <AddEmployee addEmployee={addEmployee} />
+      <Modal
+        show={showModal}
+        closeModal={() => setShowModal(false)}
+      />
     </div>
+  </>
+
   );
 }
-
 export default App;
