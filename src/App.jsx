@@ -816,49 +816,133 @@
 // export default App;
 
 
-import { useState } from "react";
-import Notification from "./day43Task-30-07-2026/PortalNotification/Notification";
-import LoginFunctional from "./day43Task-30-07-2026/EventBinding/LoginFunctional";
-import Modal from "./day43Task-30-07-2026/Practice/Modal";
+// import { useState } from "react";
+// import Notification from "./day43Task-30-07-2026/PortalNotification/Notification";
+// import LoginFunctional from "./day43Task-30-07-2026/EventBinding/LoginFunctional";
+// import Modal from "./day43Task-30-07-2026/Practice/Modal";
+
+// function App() {
+//   const [showNotification, setShowNotification] = useState(false);
+
+//   const [showModal, setShowModal] = useState(false);
+
+
+//   function handleLogin() {
+//     console.log("Login Successful"); // Console output
+//     setShowNotification(true);       // Show portal notification
+//   }
+//   return (
+//     <>
+//     <div style={{ textAlign: "center", marginTop: "100px" }}>
+//       <h1>Login Page</h1>
+//       <button onClick={handleLogin}>
+//         Login
+//       </button>
+//       {showNotification && <Notification />}
+//     </div>
+
+//     <div>
+//       <LoginFunctional />
+//     </div>
+
+//     <div style={{ textAlign: "center", marginTop: "50px" }}>
+//       <h1>React Portal Example</h1>
+
+//       <button onClick={() => setShowModal(true)}>
+//         Open Modal
+//       </button>
+
+//       <Modal
+//         show={showModal}
+//         closeModal={() => setShowModal(false)}
+//       />
+//     </div>
+//   </>
+
+//   );
+// }
+// export default App;
+
+
+
+// import React from 'react'
+// import List from './day44Task-31-07-2026/ListRendering/RenderaListofObjects'
+// import List1 from './day44Task-31-07-2026/ListRendering/RenderaListofStrings'
+// import List3 from './day44Task-31-07-2026/ListRendering/UsingDestructuringwithmap'
+// import Users from './day44Task-31-07-2026/ListRendering/Practice'
+// import EmployeeList from './day44Task-31-07-2026/EmployeeList/EmployeeList'
+// import Students from './day44Task-31-07-2026/Rendernestedlistswithproperkeys/Students'
+// import Student1 from './day44Task-31-07-2026/Practiceconditionalrenderingwithinlists/Student1'
+// import Example from './day44Task-31-07-2026/Destructure PropsandStateinReactcomponents/Example'
+
+// function App() {
+//   return (
+//     <div>
+//       <List/>
+//       <List1/>
+//       <List3/>
+//       <Users/>
+//       <EmployeeList/>
+//       <Students/>
+//       <Student1/>
+//       <Example/>
+//     </div>
+//   )
+// }
+
+// export default App
+
+
+
+// import { lazy, Suspense } from "react";
+
+// const About = lazy(() => import("./day44Task-31-07-2026/LazyLoading/About1"));
+
+// function App() {
+//   return (
+//     <div>
+//       <h1>React Lazy Loading</h1>
+
+//       <Suspense fallback={<h2>Loading...</h2>}>
+//         <About />
+//       </Suspense>
+//     </div>
+//   );
+// }
+
+// export default App;
+
+
+
+import { lazy, Suspense } from "react";
+import Header from "./day44Task-31-07-2026/Mini/FragmentsHeaders";
+import EmployeeList from "./day44Task-31-07-2026/Mini/EmployeeList";
+import Counter from "./day44Task-31-07-2026/Mini/EBCHCounter";
+import PortalModal from "./day44Task-31-07-2026/Mini/PortalModel";
+import Parent from "./day44Task-31-07-2026/Mini/Parent";
+
+
+const About = lazy(() => import("./day44Task-31-07-2026/Mini/LazyLoadingAbout"));
 
 function App() {
-  const [showNotification, setShowNotification] = useState(false);
 
-  const [showModal, setShowModal] = useState(false);
-
-
-  function handleLogin() {
-    console.log("Login Successful"); // Console output
-    setShowNotification(true);       // Show portal notification
-  }
   return (
     <>
-    <div style={{ textAlign: "center", marginTop: "100px" }}>
-      <h1>Login Page</h1>
-      <button onClick={handleLogin}>
-        Login
-      </button>
-      {showNotification && <Notification />}
-    </div>
+      <Header />
 
-    <div>
-      <LoginFunctional />
-    </div>
+      <EmployeeList />
 
-    <div style={{ textAlign: "center", marginTop: "50px" }}>
-      <h1>React Portal Example</h1>
+      <Counter />
 
-      <button onClick={() => setShowModal(true)}>
-        Open Modal
-      </button>
+      <PortalModal />
 
-      <Modal
-        show={showModal}
-        closeModal={() => setShowModal(false)}
-      />
-    </div>
-  </>
+      <Parent />
 
+      <Suspense fallback={<h2>Loading...</h2>}>
+        <About />
+      </Suspense>
+    </>
   );
 }
+
 export default App;
