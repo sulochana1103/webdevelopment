@@ -914,35 +914,226 @@
 
 
 
-import { lazy, Suspense } from "react";
-import Header from "./day44Task-31-07-2026/Mini/FragmentsHeaders";
-import EmployeeList from "./day44Task-31-07-2026/Mini/EmployeeList";
-import Counter from "./day44Task-31-07-2026/Mini/EBCHCounter";
-import PortalModal from "./day44Task-31-07-2026/Mini/PortalModel";
-import Parent from "./day44Task-31-07-2026/Mini/Parent";
+// import { lazy, Suspense } from "react";
+// import Header from "./day44Task-31-07-2026/Mini/FragmentsHeaders";
+// import EmployeeList from "./day44Task-31-07-2026/Mini/EmployeeList";
+// import Counter from "./day44Task-31-07-2026/Mini/EBCHCounter";
+// import PortalModal from "./day44Task-31-07-2026/Mini/PortalModel";
+// import Parent from "./day44Task-31-07-2026/Mini/Parent";
 
 
-const About = lazy(() => import("./day44Task-31-07-2026/Mini/LazyLoadingAbout"));
+// const About = lazy(() => import("./day44Task-31-07-2026/Mini/LazyLoadingAbout"));
+
+// function App() {
+
+//   return (
+//     <>
+//       <Header />
+
+//       <EmployeeList />
+
+//       <Counter />
+
+//       <PortalModal />
+
+//       <Parent />
+
+//       <Suspense fallback={<h2>Loading...</h2>}>
+//         <About />
+//       </Suspense>
+//     </>
+//   );
+// }
+
+// export default App;
+
+
+
+// import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
+
+// function Home() {
+//   return <h2> Welcome to College</h2>;
+// }
+
+// function Courses() {
+//   return (
+//     <>
+//       <h2> Available Courses</h2>
+//       <ul>
+//         <li>React</li>
+//         <li>Java</li>
+//         <li>Python</li>
+//       </ul>
+//     </>
+//   );
+// }
+
+// function Contact() {
+//   return (
+//     <>
+//       <h2> Contact Us</h2>
+//       <p>Phone: 9876543210</p>
+//       <p>Email: abc@gmail.com</p>
+//     </>
+//   );
+// }
+
+// export default function App() {
+//   return (
+//     <BrowserRouter>
+//       <nav>
+//         <Link to="/">Home</Link> |{" "}
+//         <Link to="/courses">Courses</Link> |{" "}
+//         <Link to="/contact">Contact</Link>
+//       </nav>
+
+//       <hr />
+
+//       <Routes>
+//         <Route path="/" element={<Home />} />
+//         <Route path="/courses" element={<Courses />} />
+//         <Route path="/contact" element={<Contact />} />
+//       </Routes>
+//     </BrowserRouter>
+//   );
+// }
+
+
+
+// import { Routes, Route, Link } from "react-router-dom";
+// import Home from "./day45Task-3-08-2026/BrowserRouting/Home";
+// import About from "./day45Task-3-08-2026/BrowserRouting/About";
+// import Contact from "./day45Task-3-08-2026/BrowserRouting/Contact";
+
+// function App() {
+//   return (
+//     <div>
+//       <h1>React Browser Routing</h1>
+
+//       <nav>
+//         <Link to="/">Home</Link> |
+//         <Link to="/about"> About</Link> |
+//         <Link to="/contact"> Contact</Link>
+//       </nav>
+
+//       <hr />
+
+//       <Routes>
+//         <Route path="/" element={<Home />} />
+//         <Route path="/about" element={<About />} />
+//         <Route path="/contact" element={<Contact />} />
+//       </Routes>
+//     </div>
+//   );
+// }
+
+// export default App;
+
+
+
+// import { Routes, Route, Link } from "react-router-dom";
+// import Home from "./day45Task-3-08-2026/ReactRouter/Home";
+// import About from "./day45Task-3-08-2026/ReactRouter/About";
+
+// function App() {
+//   return (
+//     <div>
+//       <h1>React Router Demo</h1>
+
+//       <nav>
+//         <Link to="/">Home</Link> |{" "}
+//         <Link to="/about">About</Link>
+//       </nav>
+
+//       <hr />
+
+//       <Routes>
+//         <Route path="/" element={<Home />} />
+//         <Route path="/about" element={<About />} />
+//       </Routes>
+//     </div>
+//   );
+// }
+
+// export default App;
+
+//Mini
+import { Routes, Route, Link } from "react-router-dom";
+import Home from "./day45Task-3-08-2026/Mini/Home";
+import About from "./day45Task-3-08-2026/Mini/About";
+import Services from "./day45Task-3-08-2026/Mini/Services";
+import Contact from "./day45Task-3-08-2026/Mini/Contact";
 
 function App() {
-
   return (
-    <>
-      <Header />
+    
+    <div>
+      <h1> Training Institute</h1>
 
-      <EmployeeList />
+      <nav>
+        <Link to="/">Home</Link> |{" "}
+        <Link to="/about">About</Link> |{" "}
+        <Link to="/services">Services</Link> |{" "}
+        <Link to="/contact">Contact</Link>
+      </nav>
 
-      <Counter />
+      <hr />
 
-      <PortalModal />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/services" element={<Services />} />
+        <Route path="/contact" element={<Contact />} />
+      </Routes>
+    </div>
 
-      <Parent />
-
-      <Suspense fallback={<h2>Loading...</h2>}>
-        <About />
-      </Suspense>
-    </>
   );
 }
 
 export default App;
+
+//Implement navigation using the Link component
+// import { Routes, Route } from "react-router-dom";
+// import Navbar from "./day45Task-3-08-2026/ImplementnavigationusingtheLinkcomponent/Navbar";
+// import Home1 from "./day45Task-3-08-2026/ImplementnavigationusingtheLinkcomponent/Home1";
+// import About1 from "./day45Task-3-08-2026/ImplementnavigationusingtheLinkcomponent/About1";
+
+// function App() {
+//   return (
+//     <>
+//       <Navbar />
+
+//       <Routes>
+//         <Route path="/" element={<Home1 />} />
+//         <Route path="/about" element={<About1 />} />
+//       </Routes>
+//     </>
+//   );
+// }
+
+// export default App;
+
+
+//Create routes using Routes and Route
+// import { Routes, Route } from "react-router-dom";
+
+// import Home from "./day45Task-3-08-2026/CreateroutesusingRoutesandRoute/Home";
+// import Courses from "./day45Task-3-08-2026/CreateroutesusingRoutesandRoute/Coueses";
+// import Faculty from "./day45Task-3-08-2026/CreateroutesusingRoutesandRoute/Faculty";
+// import Contact from "./day45Task-3-08-2026/CreateroutesusingRoutesandRoute/Contact";
+
+// function App() {
+//   return (
+//     <Routes>
+//       <Route path="/" element={<Home />} />
+//       <Route path="/courses" element={<Courses />} />
+//       <Route path="/faculty" element={<Faculty />} />
+//       <Route path="/contact" element={<Contact />} />
+//     </Routes>
+//   );
+// }
+
+// export default App;
+
+
+
