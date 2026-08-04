@@ -1058,39 +1058,39 @@
 // export default App;
 
 //Mini
-import { Routes, Route, Link } from "react-router-dom";
-import Home from "./day45Task-3-08-2026/Mini/Home";
-import About from "./day45Task-3-08-2026/Mini/About";
-import Services from "./day45Task-3-08-2026/Mini/Services";
-import Contact from "./day45Task-3-08-2026/Mini/Contact";
+// import { Routes, Route, Link } from "react-router-dom";
+// import Home from "./day45Task-3-08-2026/Mini/Home";
+// import About from "./day45Task-3-08-2026/Mini/About";
+// import Services from "./day45Task-3-08-2026/Mini/Services";
+// import Contact from "./day45Task-3-08-2026/Mini/Contact";
 
-function App() {
-  return (
+// function App() {
+//   return (
     
-    <div>
-      <h1> Training Institute</h1>
+//     <div>
+//       <h1> Training Institute</h1>
 
-      <nav>
-        <Link to="/">Home</Link> |{" "}
-        <Link to="/about">About</Link> |{" "}
-        <Link to="/services">Services</Link> |{" "}
-        <Link to="/contact">Contact</Link>
-      </nav>
+//       <nav>
+//         <Link to="/">Home</Link> |{" "}
+//         <Link to="/about">About</Link> |{" "}
+//         <Link to="/services">Services</Link> |{" "}
+//         <Link to="/contact">Contact</Link>
+//       </nav>
 
-      <hr />
+//       <hr />
 
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/about" element={<About />} />
-        <Route path="/services" element={<Services />} />
-        <Route path="/contact" element={<Contact />} />
-      </Routes>
-    </div>
+//       <Routes>
+//         <Route path="/" element={<Home />} />
+//         <Route path="/about" element={<About />} />
+//         <Route path="/services" element={<Services />} />
+//         <Route path="/contact" element={<Contact />} />
+//       </Routes>
+//     </div>
 
-  );
-}
+//   );
+// }
 
-export default App;
+// export default App;
 
 //Implement navigation using the Link component
 // import { Routes, Route } from "react-router-dom";
@@ -1135,5 +1135,168 @@ export default App;
 
 // export default App;
 
+//Create Nested Routes.
+// import { Routes, Route } from "react-router-dom";
+// import Dashboard from "./day46Task-4-08-2026/AdvancedBrowserRouting/NestedRoutes/Dashboard";
+// import Home from "./day46Task-4-08-2026/AdvancedBrowserRouting/NestedRoutes/Home";
+// import Profile from "./day46Task-4-08-2026/AdvancedBrowserRouting/NestedRoutes/Profile";
+// import Settings from "./day46Task-4-08-2026/AdvancedBrowserRouting/NestedRoutes/Settings";
+
+// function App() {
+//   return (
+//     <Routes>
+//       <Route path="/" element={<Dashboard />}>
+//         <Route index element={<Home />} />
+//         <Route path="profile" element={<Profile />} />
+//         <Route path="settings" element={<Settings />} />
+//       </Route>
+//     </Routes>
+//   );
+// }
+
+// export default App;
 
 
+//Implement Dynamic Routes using route parameters.
+// import { Routes, Route } from "react-router-dom";
+// import Students from "./day46Task-4-08-2026/ImplementDynamicRoutesusingrouteparameters/Students";
+// import StudentDetails from "./day46Task-4-08-2026/ImplementDynamicRoutesusingrouteparameters/StudentDetails";
+
+// function App() {
+//   return (
+//     <Routes>
+//       <Route path="/" element={<Students />} />
+//       <Route path="/student/:id" element={<StudentDetails />} />
+//     </Routes>
+//   );
+// }
+
+// export default App;
+
+
+//Access route parameters using useParams().
+// import { Routes, Route } from "react-router-dom";
+// import Students from "./day46Task-4-08-2026/ImplementDynamicRoutesusingrouteparameters/Students";
+// import StudentDetails from "./day46Task-4-08-2026/ImplementDynamicRoutesusingrouteparameters/StudentDetails";
+
+// function App() {
+//   return (
+//     <Routes>
+//       <Route path="/" element={<Students />} />
+//       <Route path="/student/:id" element={<StudentDetails />} />
+//     </Routes>
+//   );
+// }
+// export default App;
+
+
+
+//Navigate programmatically using useNavigate().
+// import { Routes, Route } from "react-router-dom";
+// import Home from "./day46Task-4-08-2026/AdvancedBrowserRouting/NavigateprogrammaticallyusinguseNavigate/Home";
+// import About from "./day46Task-4-08-2026/AdvancedBrowserRouting/NavigateprogrammaticallyusinguseNavigate/About";
+
+// function App() {
+//   return (
+//     <Routes>
+//       <Route path="/" element={<Home />} />
+//       <Route path="/about" element={<About />} />
+//     </Routes>
+//   );
+// }
+
+// export default App;
+
+
+
+// //Implement Protected Routes with authentication logic
+// import { BrowserRouter, Routes, Route } from "react-router-dom";
+// import Login from "./day46Task-4-08-2026/ImplementProtectedRouteswithauthenticationlogic/Login";
+// import Dashboard from "./day46Task-4-08-2026/ImplementProtectedRouteswithauthenticationlogic/Dashboard";
+// import ProtectedRoute from "./day46Task-4-08-2026/ImplementProtectedRouteswithauthenticationlogic/ProtectedRoute";
+
+// function App() {
+//   return (
+//     <BrowserRouter>
+//       <Routes>
+//         <Route path="/" element={<Login />} />
+
+//         <Route
+//           path="/dashboard"
+//           element={
+//             <ProtectedRoute>
+//               <Dashboard />
+//             </ProtectedRoute>
+//           }
+//         />
+//       </Routes>
+//     </BrowserRouter>
+//   );
+// }
+
+// export default App;
+
+
+
+
+//Mini
+// import { BrowserRouter, Routes, Route } from "react-router-dom";
+// import Home from "./day46Task-4-08-2026/Mini/Home";
+// import Products from "./day46Task-4-08-2026/Mini/Products";
+// import ProductDetails from "./day46Task-4-08-2026/Mini/ProductDetails";
+// import Dashboard from "./day46Task-4-08-2026/Mini/Dashboard";
+// import ProtectedRoute from "./day46Task-4-08-2026/Mini/ProtectedRoute";
+// import NotFound from "./day46Task-4-08-2026/Mini/NotFound";
+
+// function App() {
+//   return (
+//     // <BrowserRouter>
+//       <Routes>
+//         <Route path="/" element={<Home />} />
+
+//         <Route path="/products" element={<Products />} />
+
+//         {/* Dynamic Route */}
+//         <Route path="/products/:id" element={<ProductDetails />} />
+
+//         {/* Protected Route */}
+//         <Route
+//           path="/dashboard"
+//           element={
+//             <ProtectedRoute>
+//               <Dashboard />
+//             </ProtectedRoute>
+//           }
+//         />
+
+//         {/* 404 Page */}
+//         <Route path="*" element={<NotFound />} />
+//       </Routes>
+//     // </BrowserRouter>
+//   );
+// }
+
+// export default App;
+
+
+
+//Create a custom 404 Not Found page.
+import { Routes, Route } from "react-router-dom";
+import Home from "./day46Task-4-08-2026/Createacustom404NotFoundpage/Home";
+import About from "./day46Task-4-08-2026/Createacustom404NotFoundpage/Home";
+import NotFound from "./day46Task-4-08-2026/Createacustom404NotFoundpage/NotFound";
+
+function App() {
+  return (
+    <Routes>
+      <Route path="/" element={<Home />} />
+
+      <Route path="/about" element={<About />} />
+
+      {/* 404 Route */}
+      <Route path="*" element={<NotFound />} />
+    </Routes>
+  );
+}
+
+export default App;
