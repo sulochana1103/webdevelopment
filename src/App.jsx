@@ -1281,22 +1281,26 @@
 
 
 //Create a custom 404 Not Found page.
-import { Routes, Route } from "react-router-dom";
-import Home from "./day46Task-4-08-2026/Createacustom404NotFoundpage/Home";
-import About from "./day46Task-4-08-2026/Createacustom404NotFoundpage/Home";
-import NotFound from "./day46Task-4-08-2026/Createacustom404NotFoundpage/NotFound";
+// import { Routes, Route } from "react-router-dom";
+// import Home from "./day46Task-4-08-2026/Createacustom404NotFoundpage/Home";
+// import About from "./day46Task-4-08-2026/Createacustom404NotFoundpage/Home";
+// import NotFound from "./day46Task-4-08-2026/Createacustom404NotFoundpage/NotFound";
 
-function App() {
-  return (
-    <Routes>
-      <Route path="/" element={<Home />} />
+// function App() {
+//   return (
+//     <Routes>
+//       <Route path="/" element={<Home />} />
 
-      <Route path="/about" element={<About />} />
+//       <Route path="/about" element={<About />} />
 
-      {/* 404 Route */}
-      <Route path="*" element={<NotFound />} />
-    </Routes>
-  );
-}
+//       {/* 404 Route */}
+//       <Route path="*" element={<NotFound />} />
+//     </Routes>
+//   );
+// }
 
-export default App;
+// export default App;
+
+
+
+
